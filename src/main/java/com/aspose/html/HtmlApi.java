@@ -299,6 +299,7 @@ public class HtmlApi {
                 || format == InputFormats.GIF
                 || format == InputFormats.JPEG
                 || format == InputFormats.PNG
-                || format == InputFormats.TIFF;
+                || format == InputFormats.TIFF
+                || format == InputFormats.WEBP;
     }
 }

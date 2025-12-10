@@ -21,7 +21,7 @@ Add this dependency to your project's POM:
 ```xml
 <repositories>
 	<repository>
-		<id>AsposeJavaCloudAPI</id>
+		<id>AsposeCloudJavaRepository</id>
 		<url>https://releases.aspose.cloud/java/repo/</url>
 	</repository>
 </repositories>
@@ -163,12 +163,12 @@ All URIs are relative to https://api.aspose.cloud/
 
 
 ## Possible conversions:
-- HTML -> PDF, XPS, DOCX, MD, MHTML, JPEG, BMP, PNG, TIFF, GIF
-- EPUB -> PDF, XPS, DOCX, JPEG, BMP, PNG, TIFF, GIF
-- MD -> PDF, XPS, DOCX, HTML, MHTML, JPEG, BMP, PNG, TIFF, GIF
-- MHTML -> PDF, XPS, DOCX, JPEG, BMP, PNG, TIFF, GIF
-- SVG -> PDF, XPS, JPEG, BMP, PNG, TIFF, GIF
-- JPEG, BMP, PNG, TIFF, GIF -> SVG
+- HTML -> PDF, XPS, DOCX, MD, MHTML, JPEG, BMP, PNG, TIFF, GIF, WEBP
+- EPUB -> PDF, XPS, DOCX, JPEG, BMP, PNG, TIFF, GIF, WEBP
+- MD -> PDF, XPS, DOCX, HTML, MHTML, JPEG, BMP, PNG, TIFF, GIF, WEBP
+- MHTML -> PDF, XPS, DOCX, JPEG, BMP, PNG, TIFF, GIF, WEBP
+- SVG -> PDF, XPS, JPEG, BMP, PNG, TIFF, GIF, WEBP
+- JPEG, BMP, PNG, TIFF, GIF, WEBP -> SVG
 
 ## JobBuilder (VectorizationBuilder, ConverterBuilder)
 

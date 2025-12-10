@@ -15,7 +15,8 @@ public enum InputFormats {
   BMP("BMP"),
   GIF("GIF"),
   TIFF("TIFF"),
-  PNG("PNG");
+  PNG("PNG"),
+  WEBP("WEBP");
 
   private String value;
 

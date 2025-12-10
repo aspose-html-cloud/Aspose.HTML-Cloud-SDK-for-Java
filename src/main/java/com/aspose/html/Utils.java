@@ -59,6 +59,7 @@ public class Utils {
             case "PNG": return InputFormats.PNG;
             case "GIF": return InputFormats.GIF;
             case "BMP": return InputFormats.BMP;
+            case "WEBP": return InputFormats.WEBP;
             default: return null;
         }
     }

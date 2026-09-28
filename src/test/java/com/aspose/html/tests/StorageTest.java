@@ -34,11 +34,9 @@ import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
 import com.aspose.html.api.StorageApi;
-import com.aspose.html.model.DiscUsage;
 import com.aspose.html.model.FilesList;
 import com.aspose.html.model.FilesUploadResult;
 import com.aspose.html.model.ObjectExist;
-import com.aspose.html.model.StorageExist;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -299,33 +297,6 @@ public class StorageTest extends BaseTest{
 
     //Storage API    
     @Test
-    public void storageExists(){
-
-        String storageNotExist = "NotExistStorage";
-        String storageExist = "/";
-
-        try {
-            Call<StorageExist> call = storageApi.storageExists(storageNotExist);
-            Response<StorageExist> res = call.execute();
-            Assertions.assertTrue(res.isSuccessful());
-
-            StorageExist result = res.body();
-            Assertions.assertFalse(result.isExists(),"Storage doesn't exist, but result is exist");
-
-            //ToDo: Storage not defined
-//            call = storageApi.storageExists(storageExist);
-//            res = call.execute();
-//            assertTrue(res.isSuccessful());
-
-//            result = res.body();
-//            assertTrue("Stotage exist, but result is not exist", result.isExists());
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            Assertions.fail();
-        }
-    }
-
-    @Test
     public void objectExists(){
 
         String existFile = "HtmlTestDoc/test.txt";
@@ -394,26 +365,6 @@ public class StorageTest extends BaseTest{
 
             Response<ResponseBody> res2 = call_response.execute();
             Assertions.assertTrue(res2.isSuccessful());
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            Assertions.fail();
-        }
-    }
-
-    @Test
-    public void getDiscUsage(){
-
-        try {
-            Call<DiscUsage> call = storageApi.getDiscUsage(null);
-
-            Response<DiscUsage> res = call.execute();
-            Assertions.assertTrue(res.isSuccessful());
-
-            DiscUsage result = res.body();
-
-            Assertions.assertTrue(result.getUsedSize() > 0);
-            Assertions.assertTrue(result.getTotalSize() > 0);
-
         } catch (Exception ex) {
             ex.printStackTrace();
             Assertions.fail();

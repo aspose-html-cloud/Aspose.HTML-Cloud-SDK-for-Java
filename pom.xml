@@ -210,11 +210,18 @@
             <groupId>com.squareup.okhttp</groupId>
             <artifactId>okhttp</artifactId>
             <version>${okhttp-version}</version>
+            <exclusions>
+                <!-- okio 1.6.0 from okhttp 2.x would win over the okio 1.15.0 okhttp3 3.12.0 needs -->
+                <exclusion>
+                    <groupId>com.squareup.okio</groupId>
+                    <artifactId>okio</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>logging-interceptor</artifactId>
-            <version>3.0.0-RC1</version>
+            <version>3.12.0</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>

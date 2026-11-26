@@ -132,7 +132,7 @@ public class HtmlApi {
             this.clearTargetFile = true;
             req.setOutputFile(this.tempTarget);
         } else {
-            req.setOutputFile(builder.target.filePath);
+            req.setOutputFile(Utils.toStorageOutputPath(builder.target.filePath));
         }
 
         Call<OperationResult> call_convert = conversionApi.convert(

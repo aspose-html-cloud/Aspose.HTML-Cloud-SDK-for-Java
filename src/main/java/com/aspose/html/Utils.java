@@ -71,6 +71,19 @@ public class Utils {
         return OutputFormats.fromValue(ext);
     }
 
+    /**
+     * Normalizes an output path for a result that is saved to the storage.
+     * The API puts the result at the exact storage path only when the path
+     * starts with "/"; a relative path is reduced to its file name and the
+     * result goes to a temporary folder. A path with a scheme ("xxx://")
+     * is passed as is.
+     */
+    public static String toStorageOutputPath(String filePath) {
+        if (filePath == null || filePath.contains("://")) return filePath;
+        String path = filePath.replace('\\', '/');
+        return path.startsWith("/") ? path : "/" + path;
+    }
+
     public static boolean isURI(String str) {
         int colon = str.indexOf(':');
         if (colon < 3) return false;
